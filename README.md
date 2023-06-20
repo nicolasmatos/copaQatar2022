@@ -1,1 +1,1 @@
-# ⚽ Minicurso FLAI Data Science na Copa
+# ⚽ Copa do mundo Catar 2022

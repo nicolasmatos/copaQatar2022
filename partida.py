@@ -72,7 +72,6 @@ def Pontos(gols1, gols2):
         pontos1, pontos2 = 0, 3
     return pontos1, pontos2, rst
 
-
 def Jogo(selecao1, selecao2):
     l1, l2 = MediasPoisson(selecao1, selecao2)
     gols1 = int(np.random.poisson(lam = l1, size = 1))
@@ -83,10 +82,7 @@ def Jogo(selecao1, selecao2):
     placar = '{}x{}'.format(gols1, gols2)
     return [gols1, gols2, saldo1, saldo2, pontos1, pontos2, result, placar]
 
-
-
 ######## COMEÇO DO APP
-
 
 st.markdown("# 🏆 Copa do Mundo Qatar 2022") 
 
@@ -121,16 +117,11 @@ def aux(x):
 	return f'{str(round(100*x,1))}%'
 st.table(matriz.applymap(aux))
 
-
 st.markdown('---')
 st.markdown("## 🌍 Probabilidades dos Jogos da Copa") 
 
 jogoscopa = pd.read_excel('dados/outputEstimativasJogosCopa.xlsx', index_col = 0)
 st.table(jogoscopa[['grupo', 'seleção1', 'seleção2', 'Vitória', 'Empate', 'Derrota']])
-
-
-st.markdown('---')
-st.markdown('Trabalho desenvolvido no Minicurso FLAI Data Science na Copa do Mundo!')
 
 #bandeira1, nome1, prob, empate, prob, nome2, bandeira2
 #matriz de probabilidades do jogo
